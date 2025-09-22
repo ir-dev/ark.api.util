@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using ark.net.util;
 
 namespace Ark.Test.Web.Controllers
 {
@@ -20,6 +21,23 @@ namespace Ark.Test.Web.Controllers
 
         public IActionResult Index()
         {
+            string? a = null;
+            if (a.AnyNull()) 
+                Console.WriteLine("any null");
+
+            string b = "";
+            if (b.AnyNull())
+                Console.WriteLine("any null");
+
+            string? c = "  ";
+            if (c.AnyNull())
+                Console.WriteLine("any null");
+
+            string d = "3333";
+            if (d.AnyNull())
+                Console.WriteLine("any null");
+
+
             var r1 = ark.net.util.EmailUtil.IsValidFormat("ewewe");
             var r2 = ark.net.util.EmailUtil.IsValidFormat("ewewe@www.cc");
             var r3 = ark.net.util.EmailUtil.IsValidFormat("raj@immanuel.co");
